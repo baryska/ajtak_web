@@ -18,17 +18,17 @@ export default function Home() {
 			id="home"
 		>
 			<div className={styles.container}>
-			<Header />
-			<Image
-				src={windowWidth < 820 ? "/images/banner_mobile.png" : "/images/banner.png"}
-				alt="Popis obrázku"
-				layout="responsive"
-				quality={100}
-				width={windowWidth < 820 ? 400 : 1920}
-				height={windowWidth < 820 ? 600 : 1080}
-				style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }}
-			/>
-			<Motto />
+				<Header />
+				<Image
+					src={windowWidth < 820 ? "/images/banner_mobile.png" : "/images/banner.png"}
+					alt="Popis obrázku"
+					layout="responsive"
+					quality={100}
+					width={windowWidth < 820 ? 400 : 1920}
+					height={windowWidth < 820 ? 600 : 1080}
+					style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }}
+				/>
+				<Motto />
 			</div>
 			<Services />
 			<Pricing />
