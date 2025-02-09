@@ -98,6 +98,7 @@ export default function RootLayout({
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
 				/>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Devonshire&family=Ms+Madi&family=Oooh+Baby&family=Playwrite+CZ:wght@100..400&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Kavivanar&family=Special+Elite&family=Yomogi&family=Patrick+Hand+SC&family=Quicksand:wght@300..700&family=Alfa+Slab+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />

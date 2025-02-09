@@ -25,7 +25,7 @@ export default function Home() {
 				quality={100}
 				width={windowWidth < 820 ? 800 : 1920}
 				height={windowWidth < 820 ? 600 : 1080}
-				style={{ objectFit: "contain" }}
+				style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }}
 			/>
 			<Motto />
 			<Services />
