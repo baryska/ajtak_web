@@ -37,4 +37,7 @@
 
 .aboutMe {
   width: 60%;
+  @media (--s) {
+    width: 80%;
+  }
 }

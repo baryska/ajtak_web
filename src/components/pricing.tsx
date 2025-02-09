@@ -1,13 +1,15 @@
 import React from 'react';
-import { Flex, Heading } from '@/once-ui/components';
+import { Flex } from '@/once-ui/components';
 import { useInView } from 'react-intersection-observer';
 import styles from './Pricing.module.scss';
 import globalStyles from '../app/Home.module.scss';
+import { useWindowWidth } from '@/lib/windowWidth';
 
 const Pricing = (): JSX.Element => {
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
+
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>
@@ -16,6 +18,7 @@ const Pricing = (): JSX.Element => {
       <Flex
         justifyContent="space-around"
         ref={ref}
+        mobileDirection="column"
         className={`${globalStyles.section} ${inView ? globalStyles.show : ''}`}
         id="pricing"
       >

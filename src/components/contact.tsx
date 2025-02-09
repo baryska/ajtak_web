@@ -34,15 +34,17 @@ const Contact = (): JSX.Element => {
           className={`${globalStyles.section} ${inView ? globalStyles.show : ''}`}
           id="contact"
         >
-          <Flex alignItems='center' gap="12">
-            <div className={styles.iconContainer}>
-              <FontAwesomeIcon icon={faPhoneFlip} className={styles.icon} />
-              <FontAwesomeIcon icon={faCommentSms} className={styles.icon} />
-              <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
-            </div>
-            <Text variant="heading-default-xl">
-              <a href="tel:+420123456789">123 456 789</a>
-            </Text>
+          <Flex alignItems='center' gap="12" mobileDirection="column">
+            <Flex direction="row" gap="12" alignItems='center' justifyContent='center'>
+              <div className={styles.iconContainer}>
+                <FontAwesomeIcon icon={faPhoneFlip} className={styles.icon} />
+                <FontAwesomeIcon icon={faCommentSms} className={styles.icon} />
+                <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
+              </div>
+              <Text variant="heading-default-xl">
+                <a href="tel:+420123456789">123 456 789</a>
+              </Text>
+            </Flex>
             <Flex
               marginLeft='48'
             >
