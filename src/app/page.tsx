@@ -1,25 +1,17 @@
 "use client";
 import React from 'react';
-import { Flex, SmartImage } from '@/once-ui/components';
 import Image from 'next/image';
 import { Header } from '@/once-ui/modules';
 import Services from '@/components/services';
 import Motto from '@/components/motto';
 import Pricing from '@/components/pricing';
 import Contact from '@/components/contact';
-import { useState, useEffect } from 'react';
+import { useWindowWidth } from '@/lib/windowWidth'
 import styles from './Home.module.scss';
 
 
 export default function Home() {
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-	useEffect(() => {
-		const handleResize = () => setWindowWidth(window.innerWidth);
-		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
-
+	const windowWidth = useWindowWidth();
 	return (
 		<div
 			className={styles.background}
@@ -32,8 +24,8 @@ export default function Home() {
 				layout="responsive"
 				quality={100}
 				width={windowWidth < 820 ? 800 : 1920}
-      	height={windowWidth < 820 ? 600 : 1080}
-				style={{ objectFit: "contain"}}
+				height={windowWidth < 820 ? 600 : 1080}
+				style={{ objectFit: "contain" }}
 			/>
 			<Motto />
 			<Services />

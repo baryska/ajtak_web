@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { headers } from "next/headers";
 import { Metadata } from "next";
 import { baseURL, style, meta, og, schema, social } from "@/once-ui/resources/config"
-import { Background, Flex } from '@/once-ui/components'
+import { Flex } from '@/once-ui/components'
 import { Roboto_Mono } from 'next/font/google';
 import { Montserrat } from 'next/font/google';
 
@@ -81,7 +81,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html
+		<Flex
+			as="html"
 			data-neutral={style.neutral} data-brand={style.brand} data-accent={style.accent}
 			data-border={style.border} data-theme={style.theme}
 			data-solid={style.solid} data-solid-style={style.solidStyle}
@@ -97,14 +98,14 @@ export default function RootLayout({
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
 				/>
-				{/* <link rel="icon" href={schema.logo} /> */}
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Devonshire&family=Ms+Madi&family=Oooh+Baby&family=Playwrite+CZ:wght@100..400&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Kavivanar&family=Special+Elite&family=Yomogi&family=Patrick+Hand+SC&family=Quicksand:wght@300..700&family=Alfa+Slab+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+				<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Devonshire&family=Ms+Madi&family=Oooh+Baby&family=Playwrite+CZ:wght@100..400&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Kavivanar&family=Special+Elite&family=Yomogi&family=Patrick+Hand+SC&family=Quicksand:wght@300..700&family=Alfa+Slab+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 			</head>
-				<div>
-					{children}
-				</div>
-		</html>
+			<Flex
+				as="body">
+				{children}
+			</Flex>
+		</Flex>
 	);
 }
