@@ -4,18 +4,32 @@ import styles from './Motto.module.scss';
 import { useInView } from 'react-intersection-observer';
 import globalStyles from '../app/Home.module.scss';
 import Image from 'next/image';
+import { useWindowWidth } from '@/lib/windowWidth';
 
 const Motto = (): JSX.Element => {
   const [isEnded, setIsEnded] = useState(false);
+  const [showGif, setShowGif] = useState(false);
+
   const { ref, inView } = useInView({
     threshold: 1,
   });
+
+  const windowWidth = useWindowWidth();
 
   useEffect(() => {
     if (inView) {
       setIsEnded(!isEnded);
     }
   }, [inView]);
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowGif(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [])
 
   return (
     <div
@@ -48,22 +62,27 @@ const Motto = (): JSX.Element => {
         </Text>
       </div>
       <div className={styles.arrow}>
-          {!isEnded ? (
+        {!isEnded ? (
+          showGif ? (
             <Image
               src="/images/arrow.gif"
               alt="arrow"
-              height={200}
-              width={200}
+              height={windowWidth < 1600 ? 100 : 150}
+              width={windowWidth < 1600 ? 100 : 150}
               onLoad={() => {
                 setTimeout(() => setIsEnded(true), 1000);
               }}
-            />) : <Image
+            />
+          ) : null // Hide GIF before delay
+        ) : (
+          <Image
             src="/images/arrow.png"
             alt="arrow"
-            height={200}
-            width={200}
-          />}
-        </div>
+            height={windowWidth < 1600 ? 100 : 150}
+            width={windowWidth < 1600 ? 100 : 150}
+          />
+        )}
+      </div>
     </div>
   );
 };

@@ -17,6 +17,7 @@ export default function Home() {
 			className={styles.background}
 			id="home"
 		>
+			<div className={styles.container}>
 			<Header />
 			<Image
 				src={windowWidth < 820 ? "/images/banner_mobile.png" : "/images/banner.png"}
@@ -28,6 +29,7 @@ export default function Home() {
 				style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }}
 			/>
 			<Motto />
+			</div>
 			<Services />
 			<Pricing />
 			<Contact />
