@@ -23,7 +23,7 @@ export default function Home() {
 				alt="Popis obrázku"
 				layout="responsive"
 				quality={100}
-				width={windowWidth < 820 ? 800 : 1920}
+				width={windowWidth < 820 ? 400 : 1920}
 				height={windowWidth < 820 ? 600 : 1080}
 				style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }}
 			/>
