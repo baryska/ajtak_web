@@ -15,7 +15,6 @@ const Header = () => {
                 fillWidth
                 alignItems="center" justifyContent="flex-end">
                 <Flex
-                    hide="s"
                     textVariant="label-default-xl"
                     fillWidth gap="40" paddingX="l"
                     justifyContent="flex-end"
