@@ -7,11 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneFlip, faCommentSms, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
+import { useWindowWidth } from '@/lib/windowWidth';
 
 const Contact = (): JSX.Element => {
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
+
+  const windowWidth = useWindowWidth();
+  
   return (
     <>
       <Flex
@@ -65,11 +69,11 @@ const Contact = (): JSX.Element => {
             alt="portrait"
             src="/images/vaclav2.jpg"
             className={styles.portrait}
-            width={200}
-            height={200}
+            width={windowWidth < 820 ? 150 : 200}
+            height={windowWidth < 820 ? 150 : 200}
           />
           <Text
-            variant="heading-default-l"
+            variant={windowWidth < 820 ? "heading-default-m" : "heading-default-l"}
             marginTop="40"
             marginBottom="40"
           >
