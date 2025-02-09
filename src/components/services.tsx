@@ -21,7 +21,6 @@ interface Service {
 
 const Services = () => {
   const [services, setServices] = useState<Service[]>([])
-  const [isEnded, setIsEnded] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0.2,
   });
@@ -33,6 +32,7 @@ const Services = () => {
     }
     fetchData();
   }, [])
+
 
   return (
     <>
@@ -52,7 +52,7 @@ const Services = () => {
           className={`${globalStyles.section} ${inView ? globalStyles.show : ''
             } ${styles.cardContainer}`}
         >
-          {services.map((service) => (
+          {services.length > 0 ? services.map((service) => (
             <div className={`${styles.card} ${globalStyles.section} ${inView ? globalStyles.show : ''
               }`}>
               <SmartImage
@@ -64,7 +64,9 @@ const Services = () => {
               <p className={styles.cardText}>{service.title}</p>
               <p className={styles.cardTextOnHover}>{service.text}</p>
             </div>
-          ))}
+          )): (
+          <img src="/images/loading.gif" alt="Loading" height="150px" width="150px" style={{margin: 'O auto'}}/>
+          )}
         </div>
 
         <Text
