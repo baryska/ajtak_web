@@ -81,9 +81,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<Flex
-			as="html" lang="en"
-			fillHeight background="page"
+		<html
 			data-neutral={style.neutral} data-brand={style.brand} data-accent={style.accent}
 			data-border={style.border} data-theme={style.theme}
 			data-solid={style.solid} data-solid-style={style.solidStyle}
@@ -104,24 +102,9 @@ export default function RootLayout({
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Devonshire&family=Ms+Madi&family=Oooh+Baby&family=Playwrite+CZ:wght@100..400&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Kavivanar&family=Special+Elite&family=Yomogi&family=Patrick+Hand+SC&family=Quicksand:wght@300..700&family=Alfa+Slab+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
 			</head>
-			<Flex
-				as="body"
-				fillWidth fillHeight margin="0" padding="0">
-				<Background
-					style={{ zIndex: '-1' }}
-					position="fixed"
-					mask="cursor"
-					dots={{
-						display: true,
-						opacity: 0.4,
-						size: '20'
-					}}
-					/>
-				<Flex
-					flex={1} direction="column">
+				<div>
 					{children}
-				</Flex>
-			</Flex>
-		</Flex>
+				</div>
+		</html>
 	);
 }
