@@ -1,0 +1,40 @@
+.container {
+  background-color: white;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  padding-top: var(--static-space-40);
+}
+
+.iconContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.icon:nth-child(3) {
+  grid-column: span 2;
+  justify-self: center;
+}
+
+.emailIcon {
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.portrait {
+  box-shadow: var(--shadow-l);
+  border-radius: 50%;
+}
+
+.aboutMe {
+  width: 60%;
+}

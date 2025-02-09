@@ -2,14 +2,14 @@ const baseURL = 'demo.once-ui.com'
 
 // default customization applied to the HTML in the main layout.tsx
 const style = {
-    theme:       'dark',        // dark | light
-    neutral:     'gray',        // sand | gray | slate
-    brand:       'cyan',        // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-    accent:      'indigo',      // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-    solid:       'contrast',    // color | contrast
-    solidStyle:  'flat',        // flat | plastic
-    border:      'playful',     // rounded | playful | conservative
-    surface:     'translucent', // filled | translucent
+    theme:       'light',        // dark | light
+    neutral:     'slate',        // sand | gray | slate
+    brand:       'custom',        // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    accent:      'custom',      // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    solid:       'color',    // color | contrast
+    solidStyle:  'plastic',        // flat | plastic
+    border:      'rounded',     // rounded | playful | conservative
+    surface:     'filled', // filled | translucent
     transition:  'all',         // all | micro | macro
     scaling:     '100',         // 90 | 95 | 100 | 105 | 110
 }
@@ -32,9 +32,9 @@ const og = {
 const schema = {
     logo: '',
     type: 'Organization',
-    name: 'One UI',
-    description: 'Once UI is an open-source design system and component library for Next.js.',
-    email: 'lorant@once-ui.com'
+    name: 'Ajťák pro školy',
+    description: 'Na IT už ani nepomyslíte',
+    email: 'vaclav@ajtakproskoly.cz'
 }
 
 // social links

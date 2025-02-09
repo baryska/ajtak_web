@@ -1,0 +1,30 @@
+.container {
+  background-color: var(--scheme-blue-1100);
+  width: 100%;
+  text-align: left;
+  padding-bottom: 5rem;
+}
+
+.card {
+  margin: 2rem;
+  background-color: white;
+  box-shadow: var(--shadow-s);
+  border-radius: var(--radius-2);
+  padding: 1rem;
+  li {
+    padding: 0.5rem 0;
+  }
+  font-size: 1.2rem;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  padding-top: var(--static-space-40);
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}

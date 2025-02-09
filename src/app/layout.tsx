@@ -4,19 +4,17 @@ import "@/once-ui/tokens/index.scss";
 import classNames from 'classnames';
 import { headers } from "next/headers";
 import { Metadata } from "next";
-
 import { baseURL, style, meta, og, schema, social } from "@/once-ui/resources/config"
-
 import { Background, Flex } from '@/once-ui/components'
-
-import { Inter } from 'next/font/google'
 import { Roboto_Mono } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
-const primary = Inter({
+
+const primary = Montserrat({
 	variable: '--font-primary',
 	subsets: ['latin'],
-	display: 'swap',
-})
+	display: 'swap'
+});
 
 const code = Roboto_Mono({
 	variable: '--font-code',
@@ -24,18 +22,18 @@ const code = Roboto_Mono({
 	display: 'swap',
 });
 
+const secondary = Montserrat({
+	variable: '--font-secondary',
+	subsets: ['latin'],
+	display: 'swap'
+});
+
 type FontConfig = {
-    variable: string;
+	variable: string;
 };
 
-/*
-	Replace with code for secondary and tertiary fonts
-	from https://once-ui.com/customize
-*/
-const secondary: FontConfig | undefined = undefined;
 const tertiary: FontConfig | undefined = undefined;
-/*
-*/
+
 
 export async function generateMetadata(): Promise<Metadata> {
 	const host = (await headers()).get("host");
@@ -78,9 +76,9 @@ const schemaData = {
 };
 
 export default function RootLayout({
-  	children,
+	children,
 }: Readonly<{
-  	children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
 	return (
 		<Flex
@@ -101,12 +99,15 @@ export default function RootLayout({
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
 				/>
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
+				<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Devonshire&family=Ms+Madi&family=Oooh+Baby&family=Playwrite+CZ:wght@100..400&family=Fuzzy+Bubbles:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Kavivanar&family=Special+Elite&family=Yomogi&family=Patrick+Hand+SC&family=Quicksand:wght@300..700&family=Alfa+Slab+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
 			</head>
 			<Flex
 				as="body"
 				fillWidth fillHeight margin="0" padding="0">
 				<Background
-					style={{zIndex: '-1'}}
+					style={{ zIndex: '-1' }}
 					position="fixed"
 					mask="cursor"
 					dots={{
@@ -114,10 +115,7 @@ export default function RootLayout({
 						opacity: 0.4,
 						size: '20'
 					}}
-					gradient={{
-						display: true,
-						opacity: 0.4,
-					}}/>
+					/>
 				<Flex
 					flex={1} direction="column">
 					{children}
