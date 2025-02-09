@@ -67,7 +67,7 @@ const Contact = (): JSX.Element => {
             height={200}
           />
           <Text
-            variant="body-default-l"
+            variant="heading-default-l"
             marginTop="40"
             marginBottom="40"
           >
