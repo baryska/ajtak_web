@@ -7,11 +7,11 @@ import { useWindowWidth } from '@/lib/windowWidth';
 
 const Pricing = (): JSX.Element => {
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="pricing">
       <h1 className={styles.heading}>
         Kolik to stojí
       </h1>
@@ -20,7 +20,6 @@ const Pricing = (): JSX.Element => {
         ref={ref}
         mobileDirection="column"
         className={`${globalStyles.section} ${inView ? globalStyles.show : ''}`}
-        id="pricing"
       >
         <div className={styles.card}>
           <h3 className={styles.center}>Basic</h3>
