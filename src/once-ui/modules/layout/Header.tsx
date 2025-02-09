@@ -3,8 +3,10 @@ import { Flex } from '@/once-ui/components';
 import { Link } from 'react-scroll';
 import styles from './Header.module.scss';
 import React from 'react';
+import { useWindowWidth } from '@/lib/windowWidth';
 
 const Header = () => {
+    const windowWidth = useWindowWidth();
     return (
         <Flex
             as="header"
@@ -17,7 +19,7 @@ const Header = () => {
                 <Flex
                     textVariant="label-default-xl"
                     fillWidth gap="40" paddingX="l"
-                    justifyContent="flex-end"
+                    justifyContent={windowWidth < 820 ? "center" :"flex-end"}
                     alignItems="center">
                     <Link to="services" smooth={true} duration={1000} className={styles.link}>
                         Co nabízím

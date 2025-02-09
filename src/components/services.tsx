@@ -46,7 +46,6 @@ const Services = () => {
             O co se už nemusíte starat
           </h1>
         </div>
-
         <div
           ref={ref}
           className={`${globalStyles.section} ${inView ? globalStyles.show : ''
@@ -77,7 +76,6 @@ const Services = () => {
           ...a o cokoliv dalšího budete potřebovat.
         </Text>
       </div>
-
     </>
   )
 }
