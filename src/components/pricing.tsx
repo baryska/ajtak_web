@@ -3,7 +3,6 @@ import { Flex } from '@/once-ui/components';
 import { useInView } from 'react-intersection-observer';
 import styles from './Pricing.module.scss';
 import globalStyles from '../app/Home.module.scss';
-import { useWindowWidth } from '@/lib/windowWidth';
 
 const Pricing = (): JSX.Element => {
   const { ref, inView } = useInView({
