@@ -75,8 +75,9 @@ const Contact = (): JSX.Element => {
           />
           <Text
             variant={windowWidth < 820 ? "heading-default-m" : "heading-default-l"}
-            marginTop="40"
+            marginTop={windowWidth < 820 ? "12" : "40"}
             marginBottom="40"
+            className={styles.aboutMeText}
           >
             Jsem IT expert s více než dvacetiletou praxí ze soukromé i státní sféry. Starám se o školy v Praze a jižní části Středočeského kraje.
             Mám dvě školou povinné děti.
