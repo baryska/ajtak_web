@@ -64,6 +64,7 @@ const Contact = (): JSX.Element => {
           className={styles.aboutMe}
           alignItems="center"
           marginTop="24"
+          mobileDirection="column"
         >
           <Image
             alt="portrait"
