@@ -46,7 +46,7 @@ const Contact = (): JSX.Element => {
                 <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
               </div>
               <Text variant="heading-default-xl">
-                <a href="tel:+420123456789">123 456 789</a>
+                <a href="tel:+420737887744">+420 737 88 77 44</a>
               </Text>
             </Flex>
             <Flex
