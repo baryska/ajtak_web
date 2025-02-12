@@ -20,13 +20,24 @@ export default function Home() {
 			<div className={styles.container}>
 				<Header />
 				<Image
-					src={windowWidth < 820 ? "/images/banner_mobile.png" : "/images/banner.png"}
-					alt="Popis obrázku"
+					className={styles.desktopBanner}
+					src="/images/banner.png"
+					alt="banner"
+					priority
 					layout="responsive"
 					quality={100}
-					width={windowWidth < 820 ? 400 : 1920}
-					height={windowWidth < 820 ? 600 : 1080}
-					style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }}
+					width={1920}
+					height={1080}
+				/>
+				<Image
+					className={styles.mobileBanner}
+					src="/images/banner_mobile.png"
+					alt="banner"
+					priority
+					layout="responsive"
+					quality={100}
+					width={600}
+					height={800}
 				/>
 				<Motto />
 			</div>
