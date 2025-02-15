@@ -1,3 +1,13 @@
+.section {
+  opacity: 0; 
+  transform: translateY(50px); 
+  transition: all 0.6s ease-out; 
+}
+.show {
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
 .background {
   background-color: var(--scheme-blue-1100);
 }
