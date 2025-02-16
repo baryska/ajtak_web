@@ -24,11 +24,9 @@ const Pricing = (): JSX.Element => {
           <h3 className={styles.center}>Basic</h3>
           <div>
             <ul>
-              <li>On-site 1x za 14 dní max 4 hodiny
-              </li>
-              <li>0-50 spravovaných zařízení</li>
-              <li>Vzdálená podpora přes RustDesk, Teams, Teamviewer</li>
-              <li>Telefonická, mailová nebo chat podpora ve všední dny 7:00-15:00</li>
+              <li>On-site 4 hodiny jednou za dva týdny</li>
+              <li>V ostatní všední dny vzdálená podpora 7:00-15:00 přes RustDesk, Teams, Teamviewer, email, telefon nebo chat</li>
+              <li>Cca 0-50 spravovaných zařízení</li>
               <li>Vícepráce: 500,- Kč/hod</li>
               <h2 className={styles.center} style={{fontFamily: 'Raleway'}}>15 000 Kč/měsíc</h2>
             </ul>
@@ -38,11 +36,10 @@ const Pricing = (): JSX.Element => {
           <h3 className={styles.center}>Premium</h3>
           <div>
             <ul>
-              <li>On-site 1x za 7 dní max 4 hodiny</li>
-              <li>50-100 spravovaných zařízení
+              <li>On-site 4 hodiny jednou týdně</li>
+              <li>V ostatní všední dny vzdálená podpora 7:00-15:00 přes RustDesk, Teams, Teamviewer, email, telefon nebo chat</li>
+              <li>Cca 50-100 spravovaných zařízení
               </li>
-              <li>Vzdálená podpora přes RustDesk, Teams, Teamviewer</li>
-              <li>Telefonická, mailová nebo chat podpora ve všední dny 7:00-15:00</li>
               <li>Vícepráce: 400,- Kč/hod</li>
               <h2 className={styles.center} style={{fontFamily: 'Raleway'}}>20 000 Kč/měsíc</h2>
             </ul>
@@ -51,12 +48,11 @@ const Pricing = (): JSX.Element => {
         <div className={styles.card}>
           <h3 className={styles.center}>Ultimate</h3>
           <div>
-            <ul>
-              <li>On-site 1x za 7 dní max 8 hodin</li>
+            <ul >
+              <li>On-site 8 hodin jednou týdně</li>
+              <li>Vzdálená podpora 24/7 přes RustDesk, Teams, Teamviewer, email, telefon nebo chat</li>
               <li>100+ spravovaných zařízení
               </li>
-              <li>Vzdálená podpora přes RustDesk, Teams, Teamviewer</li>
-              <li>Telefonická, mailová nebo chat podpora 24/7</li>
               <li>Vícepráce: 300,- Kč/hod</li>
               <h2 className={styles.center} style={{fontFamily: 'Raleway'}}>30 000 Kč/měsíc</h2>
             </ul>
