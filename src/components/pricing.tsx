@@ -59,6 +59,9 @@ const Pricing = (): JSX.Element => {
           </div>
         </div>
       </Flex>
+      <p className={styles.footerText}>
+        (individuální dohoda možná)
+      </p>
     </div>
   );
 };
