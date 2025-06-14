@@ -98,6 +98,17 @@ export default function RootLayout({
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
 				/>
+				<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNBJLRJX4T"></script>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-WNBJLRJX4T');
+    			`,
+					}}
+				></script>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />

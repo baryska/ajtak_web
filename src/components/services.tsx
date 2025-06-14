@@ -16,7 +16,7 @@ interface Service {
   key: number,
   title: string,
   image: Img,
-  text: string
+  text: string,
 }
 
 const Services = () => {
@@ -52,7 +52,7 @@ const Services = () => {
             } ${styles.cardContainer}`}
         >
           {services.length > 0 ? services.map((service) => (
-            <div className={`${styles.card} ${globalStyles.section} ${inView ? globalStyles.show : ''
+            <div key={service.key} className={`${styles.card} ${globalStyles.section} ${inView ? globalStyles.show : ''
               }`}>
               <SmartImage
                 alt="banner"
