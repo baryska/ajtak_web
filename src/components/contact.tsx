@@ -15,7 +15,7 @@ const Contact = (): JSX.Element => {
   });
 
   const windowWidth = useWindowWidth();
-  
+
   return (
     <>
       <Flex
@@ -79,7 +79,7 @@ const Contact = (): JSX.Element => {
             marginBottom="40"
             className={styles.aboutMeText}
           >
-            Jsem IT expert s více než dvacetiletou praxí ze soukromé i státní sféry. Starám se o školy v Praze a jižní části Středočeského kraje.
+            Jsem IT expert s více než dvacetiletou praxí ze soukromé i státní sféry a pomáhám školám s digitálními technologiemi.
             Mám dvě školou povinné děti.
           </Text>
         </Flex>
