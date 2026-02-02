@@ -28,7 +28,7 @@ const Pricing = (): JSX.Element => {
               <li>V ostatní všední dny vzdálená podpora 7:00-15:00 přes RustDesk, Teams, Teamviewer, email, telefon nebo chat</li>
               <li>Cca 0-50 spravovaných zařízení</li>
               <li>Vícepráce: 500,- Kč/hod</li>
-              <h2 className={styles.center} style={{fontFamily: 'Raleway'}}>15 000 Kč/měsíc</h2>
+              <h2 className={styles.center} style={{fontFamily: 'Raleway'}}>9 000 Kč/měsíc</h2>
             </ul>
           </div>
         </div>
@@ -41,7 +41,7 @@ const Pricing = (): JSX.Element => {
               <li>Cca 50-100 spravovaných zařízení
               </li>
               <li>Vícepráce: 400,- Kč/hod</li>
-              <h2 className={styles.center} style={{fontFamily: 'Raleway'}}>20 000 Kč/měsíc</h2>
+              <h2 className={styles.center} style={{fontFamily: 'Raleway'}}>14 000 Kč/měsíc</h2>
             </ul>
           </div>
         </div>
@@ -54,7 +54,7 @@ const Pricing = (): JSX.Element => {
               <li>100+ spravovaných zařízení
               </li>
               <li>Vícepráce: 300,- Kč/hod</li>
-              <h2 className={styles.center} style={{fontFamily: 'Raleway'}}>30 000 Kč/měsíc</h2>
+              <h2 className={styles.center} style={{fontFamily: 'Raleway'}}>19 000 Kč/měsíc</h2>
             </ul>
           </div>
         </div>
