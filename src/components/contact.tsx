@@ -83,7 +83,7 @@ const Contact = (): JSX.Element => {
             Mám dvě školou povinné děti.
           </Text>
         </Flex>
-        © 2025
+        © 2026
       </Flex>
     </>
   );
